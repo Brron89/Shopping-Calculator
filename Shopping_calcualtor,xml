@@ -7,6 +7,7 @@
     tools:context=".MainActivity">
 
     <LinearLayout
+        android:id="@+id/linearLayout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -17,15 +18,17 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="20dp"
-            android:textSize="22sp"
-            android:text="Item Name:"/>
+            android:text="Item Name:"
+            android:textSize="22sp" />
+
         <EditText
+            android:id="@+id/item_name"
             android:layout_width="150dp"
             android:layout_height="wrap_content"
-            android:inputType="numberDecimal"
-            android:id="@+id/item_name"
+            android:layout_marginLeft="43dp"
             android:layout_marginRight="15dp"
-            />
+            android:hint="Enter name"
+            android:inputType="numberDecimal" />
 
 
     </LinearLayout>
@@ -47,7 +50,9 @@
             android:layout_width="150dp"
             android:layout_height="wrap_content"
             android:inputType="numberDecimal"
+            android:hint="0.00"
             android:id="@+id/item_price"
+            android:layout_marginLeft="50dp"
             android:layout_marginRight="15dp"
             />
 
@@ -71,7 +76,9 @@
             android:layout_width="150dp"
             android:layout_height="wrap_content"
             android:inputType="numberDecimal"
+            android:hint="0"
             android:id="@+id/item_quantity"
+            android:layout_marginLeft="20dp"
             android:layout_marginRight="15dp"
             />
 
@@ -96,6 +103,7 @@
             android:layout_height="wrap_content"
             android:inputType="numberDecimal"
             android:id="@+id/sales_tax"
+            android:layout_marginLeft="62dp"
             android:layout_marginRight="15dp"
             />
 
@@ -120,10 +128,55 @@
         android:layout_height="wrap_content"
         android:inputType="numberDecimal"
         android:id="@+id/total"
+        android:layout_marginLeft="99dp"
         android:layout_marginRight="15dp"
         />
 
 
     </LinearLayout>
 
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintVertical_bias="0.6"
+        >
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="145dp"
+            android:text="Compute"
+            android:id="@+id/compute_button"
+            />
 
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="add item"
+            android:id="@+id/add_button"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintVertical_bias="0.7"
+        >
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="145dp"
+            android:text="show list"
+            android:id="@+id/show_button"
+            />
+    </LinearLayout>
+
+
+
+
+
+
+</android.support.constraint.ConstraintLayout>
